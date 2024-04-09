@@ -23,18 +23,16 @@ npm run test
 ```sh
 1. Profile
 
-- {{host}}/:id => retrieve profile by Id
+- {{host}}/profile/create => create new profile
+- {{host}}/profile/all => retrieve all profiles
+- {{host}}/profile:id => retrieve profile by Id
 
-2. User
 
-- {{host}}/user/createUser => create new user
-- {{host}}/user/getAll => retrieve all registered users
+2. Comment
 
-3. Comment
-
-- {{host}}/comment/postComment/:userId => create a new comment
-- {{host}}/comment/getComment => get a comment (you may fill 'mbti' or 'enneagram' or 'zodiac' to filter the comment and sort with 'mostrecent' or 'mostliked' value to sort as a query parametes)
-- {{host}}/comment/likeComment => like/unlike the comment
+- {{host}}/comment/post/:profileId => create a new comment
+- {{host}}/comment/* => get a comment (you may fill 'mbti' or 'enneagram' or 'zodiac' to filter the comment and sort with 'mostrecent' or 'mostliked' value to sort as a query parametes)
+- {{host}}/comment/:commentId/like?profileId=${profileId} => like/unlike the comment
 ```
 
 
